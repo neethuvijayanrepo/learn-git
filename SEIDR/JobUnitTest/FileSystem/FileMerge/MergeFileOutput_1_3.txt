@@ -1,0 +1,5 @@
+AccountNumber, Facility, FileName, Value,Account,Facility,Charges,Code
+A123, A, File, 76.22,A123,A,132.42,M
+A124, A, File, 10.43,,,,
+NB36982, B, File, 1034.89-,NB36982,B,84.39,E
+T17, T, File, 72.10,T17,T,172.10,M

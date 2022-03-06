@@ -1,0 +1,12 @@
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\bin\Debug\MIMIR.dacpac
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\bin\Debug\MIMIR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\bin\Debug\MIMIR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\bin\Debug\master.dacpac
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\obj\Debug\MIMIR.sqlproj.CopyComplete
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\obj\Debug\MIMIR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\obj\Debug\MIMIR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\obj\Debug\MIMIR.sqlproj.AssemblyReference.cache
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\obj\Debug\Model.xml
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\obj\Debug\refactor.xml
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\obj\Debug\postdeploy.sql
+D:\MetrixGitNew\metrix_git\SEIDR\MIMIR\obj\Debug\predeploy.sql

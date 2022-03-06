@@ -1,0 +1,5 @@
+Account No|Facility|Charges
+A123| A| 132.42
+A124| A| 10.43-
+NB36982| B| 84.39
+T17| T| 172.10

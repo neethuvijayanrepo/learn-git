@@ -1,0 +1,10 @@
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\bin\Debug\SEIDR.Test.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\bin\Debug\SEIDR.Test.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\bin\Debug\SEIDR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\bin\Debug\SEIDR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\bin\Debug\SEIDR.xml
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\obj\Debug\SEIDR.Test.csproj.AssemblyReference.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\obj\Debug\SEIDR.Test.csproj.CoreCompileInputs.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\obj\Debug\SEIDR.Test.csproj.CopyComplete
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\obj\Debug\SEIDR.Test.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.Test\obj\Debug\SEIDR.Test.pdb

@@ -1,0 +1,5 @@
+AccountNumber, Facility, FileName, Value
+A123, A, File, 76.22
+A124, A, File, 10.43
+NB36982, B, File, 1034.89-
+T17, T, File, 72.10

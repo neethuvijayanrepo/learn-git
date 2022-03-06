@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49EA78E1-1837-45DB-914D-782F4318C5CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JobUnitTest</RootNamespace>
+    <AssemblyName>JobUnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SQLServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SQLServer.ManagedDTS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="ARxChangeExportTest.cs" />
+    <Compile Include="BatchScriptTest.cs" />
+    <Compile Include="ContextJobTestBase.cs" />
+    <Compile Include="DemoMap\AssertionTest.cs" />
+    <Compile Include="DemoMap\BucketTest.cs" />
+    <Compile Include="DemoMap\CernerTest.cs" />
+    <Compile Include="DemoMap\ChildExecutionTest.cs" />
+    <Compile Include="DemoMap\NameHelperTest.cs" />
+    <Compile Include="DemoMap\Watsonville_DMAP_tester.cs" />
+    <Compile Include="Deployment\DeploymentPrep.cs" />
+    <Compile Include="Deployment\DeploymentPrepContext.cs" />
+    <Compile Include="Deployment\DeploymentPrepJob.cs" />
+    <Compile Include="DMAP.cs" />
+    <Compile Include="FileConcatenationTest.cs" />
+    <Compile Include="FileSortJobTest.cs" />
+    <Compile Include="FileSplitting\LexisNexisParseJob.cs" />
+    <Compile Include="FileSystemJobTests.cs" />
+    <Compile Include="FileSystemJobTests.Directories.cs" />
+    <Compile Include="FileSystemJobTests.File.cs" />
+    <Compile Include="DemoMapPreprocessTest.cs" />
+    <Compile Include="FileSystem\FileMerge\FileMergeJobTest.cs" />
+    <Compile Include="FixWidthConversion\FixWidthConversionJobTest.cs" />
+    <Compile Include="FTPJobTest.cs" />
+    <Compile Include="JobProfile_Job_SettingFileTest.cs" />
+    <Compile Include="LiveVoxExportTest.cs" />
+    <Compile Include="FileSplitting\NordisSplitJobTest.cs" />
+    <Compile Include="MetrixProcessing\Invoice\PhysicianInvoiceTest.cs" />
+    <Compile Include="METRIX_EXPORT\BaseTest.cs" />
+    <Compile Include="METRIX_EXPORT\EDI276Test.cs" />
+    <Compile Include="METRIX_EXPORT\PatientCoActivityFileImportTest.cs" />
+    <Compile Include="METRIX_EXPORT\SkipTracingTest_Export.cs" />
+    <Compile Include="METRIX_EXPORT\VendorBalanceFileGenerationJobTest.cs" />
+    <Compile Include="METRIX_EXPORT\StatementXMLExportTest.cs" />
+    <Compile Include="METRIX_EXPORT\StatusUpdateJobTest.cs" />
+    <Compile Include="METRIX_EXPORT\SkipTracingTest.cs" />
+    <Compile Include="MockData\MockDatabaseLookupSet.cs" />
+    <Compile Include="MockData\MockDatabaseManager.cs" />
+    <Compile Include="MockData\MockQueryModel.cs" />
+    <Compile Include="PGPTest.cs" />
+    <Compile Include="PreProcessJobTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueTest.cs" />
+    <Compile Include="RegistrationFileTest.cs" />
+    <Compile Include="SimpleCleanTest.cs" />
+    <Compile Include="JobTestBase.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="MockData\TestExecutor.cs" />
+    <Compile Include="FileValidation\FileValidationJobTest.cs" />
+    <Compile Include="PreprocessJobPackageVariablesMappingTest.cs" />
+    <Compile Include="PGPJobTest.cs" />
+    <Compile Include="EdiConversionTest.cs" />
+    <Compile Include="DatabaseLookupSetTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SEIDR.DemoMap\SEIDR.DemoMap.csproj">
+      <Project>{395480e8-d089-40e8-a5c7-f8929e6a817b}</Project>
+      <Name>SEIDR.DemoMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR.FileSystem\SEIDR.FileSystem.csproj">
+      <Project>{90f07395-f05a-4555-9a46-517a15096eb0}</Project>
+      <Name>SEIDR.FileSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR.JobBase\SEIDR.JobBase.csproj">
+      <Project>{364639C6-A8BB-4A53-8023-02F023A8DFCD}</Project>
+      <Name>SEIDR.JobBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR.JobExecutor\SEIDR.JobExecutor.csproj">
+      <Project>{6da30564-0c42-47a6-87d1-fe7a9fb03010}</Project>
+      <Name>SEIDR.JobExecutor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR.MetrixProcessing\SEIDR.MetrixProcessing.csproj">
+      <Project>{e6210b0d-fd2f-4f7a-8079-ea81cdbb20d4}</Project>
+      <Name>SEIDR.MetrixProcessing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR.METRIX_EXPORT\SEIDR.METRIX_EXPORT.csproj">
+      <Project>{0a85ce12-a7bf-4f73-a913-90f7f6810092}</Project>
+      <Name>SEIDR.METRIX_EXPORT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR.PreProcess\SEIDR.PreProcess.csproj">
+      <Project>{cbccace6-d99e-4417-99af-4898a5adcfd8}</Project>
+      <Name>SEIDR.PreProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR\SEIDR.csproj">
+      <Project>{81417f92-b840-4476-96b7-6d87d224fd78}</Project>
+      <Name>SEIDR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="FileResource folder\BatchScripting1.bat" />
+    <None Include="FileResource folder\BatchScripting4.bat" />
+    <None Include="FileResource folder\private.key" />
+    <None Include="FileResource folder\public.key" />
+    <None Include="FileResource folder\TEST_PACK_VariableOnly.dtsx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190801_030114__out.csv" />
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190801_030114__out.csv.326.CYM" />
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190801_030114__out.csv.329.CYM" />
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190802_030114__out.csv" />
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190802_030114__out.csv.326.CYM" />
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190802_030114__out.csv.327.CYM" />
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190802_030114__out.csv.328.CYM" />
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190802_030114__out.csv.329.CYM" />
+    <None Include="FileSplitting\LexisNexisBatchFile_994_20190802_030114__out.csv.330.CYM" />
+    <None Include="FileSplitting\Nav_Confirmation_20190603_Project115.Expected" />
+    <None Include="FileSplitting\Nav_Confirmation_20190604_1.txt.Project115.EXPECTED" />
+    <None Include="FileSplitting\Nav_Confirmation_20190604_1.txt.Project148.EXPECTED" />
+    <None Include="FileSplitting\Nav_Confirmation_20190604_1.txt.Project198.EXPECTED" />
+    <None Include="FileSplitting\Nav_Confirmation_20190604_1.txt.Project199.EXPECTED" />
+    <None Include="FileSplitting\Nav_Confirmation_20190604_1.txt.Project86.EXPECTED" />
+    <None Include="FileSystem\FileToClean.csv" />
+    <None Include="FileSystem\FileToClean.csv.CLN" />
+    <None Include="FileSystem\TestTwoFiles.zip" />
+    <None Include="FileValidation\BOMTest.CLN" />
+    <None Include="FixWidthConversion\AdvancedDerive.csv" />
+    <None Include="METRIX_EXPORT\TestRead.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileResource folder\DummyFile.txt" />
+    <Content Include="FileSplitting\Nav_Confirmation_20190603_1.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileLeft1.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileLeft2.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileOutput_1_1.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileOutput_1_2.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileOutput_1_3.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileOutput_2_1.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileOutput_2_2.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileOutput_2_3.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileRight1.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileRight2.txt" />
+    <Content Include="FileSystem\FileMerge\MergeFileRight3.txt" />
+    <Content Include="METRIX_EXPORT\TestRead.txt" />
+    <None Include="FileSplitting\Nav_Confirmation_20190604_1.txt.Project188.EXPECTED" />
+    <Content Include="FileSplitting\Nav_Confirmation_20190604_1.txt" />
+    <Content Include="FileValidation\BCH_Format_BadFirstRow.txt" />
+    <Content Include="FileValidation\BOMTest.txt" />
+    <Content Include="FixWidthConversion\Advanced.txt" />
+    <Content Include="FixWidthConversion\TestSettingLoad.txt" />
+    <Content Include="FixWidthConversion\Basic.txt" />
+    <Content Include="FixWidthConversion\TestSettingsWithNoFilterOut.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

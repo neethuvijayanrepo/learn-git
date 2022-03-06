@@ -1,0 +1,9 @@
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\bin\Debug\SEIDR.XML
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\bin\Debug\SEIDR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\bin\Debug\SEIDR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\bin\Debug\SEIDR.dll.CodeAnalysisLog.xml
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\bin\Debug\SEIDR.dll.lastcodeanalysissucceeded
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\obj\Debug\SEIDR.csproj.CoreCompileInputs.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\obj\Debug\SEIDR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\obj\Debug\SEIDR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR\obj\Debug\SEIDR.csproj.AssemblyReference.cache

@@ -1,0 +1,16 @@
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\SEIDR.JobExecutor.exe.config
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\SEIDR.JobExecutor.exe
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\SEIDR.JobExecutor.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\SEIDR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\SEIDR.JobBase.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\Cymetrix.Andromeda.Encryption.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\SEIDR.JobBase.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\SEIDR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\SEIDR.xml
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\Cymetrix.Andromeda.Encryption.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\bin\Debug\Cymetrix.Andromeda.Encryption.dll.config
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\obj\Debug\SEIDR.JobExecutor.csproj.AssemblyReference.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\obj\Debug\SEIDR.JobExecutor.csproj.CoreCompileInputs.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\obj\Debug\SEIDR.JobExecutor.csproj.CopyComplete
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\obj\Debug\SEIDR.JobExecutor.exe
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.JobExecutor\obj\Debug\SEIDR.JobExecutor.pdb

@@ -1,0 +1,5 @@
+Account|Facility|Charges|Code
+A123|A|132.42|M
+A124|V|10.43-|M
+NB36982|B|84.39|E
+T17|T|172.10|M

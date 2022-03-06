@@ -1,0 +1,3 @@
+AccountNumber, Facility, FileName, Value,Account No,Facility,Charges
+A124, A, File, 10.43,A124, B, 10.43-
+T17, T, File, 72.10,T17, T, 172.10

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SEIDR.METRIX_EXPORT.ExportBatchModel" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMEAAAgAAgEAAAAAAACAAABAAAQAEigAgAAUGEAUA=</HashCode>
+      <FileName>ExportBatchModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.ExportSetting">
+    <Position X="11" Y="3.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>ExportSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.MetrixExportStatusUpdateJob">
+    <Position X="0.5" Y="8.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAgAAAgAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>MetrixExportStatusUpdateJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.LiveVoxExport.LiveVoxFileGenerationJob">
+    <Position X="8.25" Y="8.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LiveVoxExport\LiveVoxExportJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.LiveVoxExport.LiveVoxFile">
+    <Position X="8.25" Y="9.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAACAAAAAQAAAACAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LiveVoxExport\LiveVoxFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.LiveVoxExport.ExportBatchItem">
+    <Position X="13" Y="8.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>gAJIBEABAICgABAIAwmAAQAICAoAAQADIRQAJADA4Uw=</HashCode>
+      <FileName>LiveVoxExport\LiveVoxModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.Utility.ChildExecutionInfo">
+    <Position X="14.5" Y="2" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAEAAAAAAAAAABBAAAAAAAAABRAAAAAAA=</HashCode>
+      <FileName>Utility\ChildExecutionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.Utility.CsvHelper">
+    <Position X="16.75" Y="5.75" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AQgAAAAABAIAAAAAAAAAAAAABAAAKAAAACBACAAAAAA=</HashCode>
+      <FileName>Utility\CsvHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.Utility.JobExecutionHelper">
+    <Position X="11" Y="0.5" Width="9.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\JobExecutionHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.METRIX_EXPORT.ExportJobBase">
+    <Position X="0.5" Y="0.5" Width="10.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SEIDR.METRIX_EXPORT.ExportJobBase.ExportBatchStage">
+        <TypeIdentifier>
+          <NewMemberFileName>ExportJobBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAIAAAAAQQAAAgAABEAAAAABAAAAogAAwBIAA=</HashCode>
+      <FileName>ExportJobBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="SEIDR.METRIX_EXPORT.ResultStatusCode">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ResultStatusCode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

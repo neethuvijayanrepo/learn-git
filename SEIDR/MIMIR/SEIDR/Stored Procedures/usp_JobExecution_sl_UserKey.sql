@@ -1,0 +1,10 @@
+﻿
+/*SP FOR DISPLAYING KEY VALUES*/
+CREATE PROCEDURE [SEIDR].[usp_JobExecution_sl_UserKey]
+	
+AS
+BEGIN
+	SELECT DISTINCT userkey1,userkey2 
+	FROM SEIDR.JobExecution WITH (NOLOCK)
+	WHERE (userkey1 IS NOT NULL OR userkey2 IS NOT NULL) AND DD IS NULL
+END

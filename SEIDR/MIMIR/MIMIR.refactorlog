@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="d34036a8-5a07-4924-ae80-4382c918a10e" ChangeDateTime="03/07/2018 22:01:23">
+    <Property Name="ElementName" Value="[SEIDR].[FileSystemOperation].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileSystemOperation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FileSystemOperationId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="38eabede-dc89-4a15-a9ed-4b88abf63f25" ChangeDateTime="03/07/2018 22:14:31">
+    <Property Name="ElementName" Value="[SEIDR].[FileSystemOperation].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileSystemOperation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FileSystemOperation" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="03e65afd-e4f5-44d9-ad6b-ad9cfd6ab953" ChangeDateTime="03/07/2018 22:16:21">
+    <Property Name="ElementName" Value="[SEIDR].[FileSystemOperation].[FileSystemOperation]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileSystemOperation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FileSystemOperationCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f5552ca2-edf4-4989-8522-4c6700d846bd" ChangeDateTime="03/07/2018 23:40:51">
+    <Property Name="ElementName" Value="[SEIDR].[FileSystemJob].[FileSystemOperationId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileSystemJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FileSystemJobId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7720a9c1-d005-4874-a650-143dee4a11da" ChangeDateTime="03/16/2018 23:30:58">
+    <Property Name="ElementName" Value="[SEIDR].[DatabaseLookup].[EncryptedPassWord]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[DatabaseLookup]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EncryptedPassword" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e00358f0-1318-4fab-9a49-9ae6986bf400" ChangeDateTime="03/16/2018 23:33:19">
+    <Property Name="ElementName" Value="[SEIDR].[DatabaseLookup].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[DatabaseLookup]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DatabaseId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="99c21fae-de0f-4f9a-a987-b6ef00a3be5c" ChangeDateTime="03/16/2018 23:33:26">
+    <Property Name="ElementName" Value="[SEIDR].[DatabaseLookup].[DatabaseId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[DatabaseLookup]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DatabaseID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3e633891-cef6-4a5f-a38d-df17b798fd8c" ChangeDateTime="03/27/2018 19:08:30">
+    <Property Name="ElementName" Value="[SEIDR].[User_TimeOffset].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[User_TimeOffset]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="16dd64ae-c1e1-4829-80b8-61596a258104" ChangeDateTime="03/28/2018 17:17:22">
+    <Property Name="ElementName" Value="[SEIDR].[FileSystemJob].[RegisterNewFile]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileSystemJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UpdateExecutionPath" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f6eff123-587f-4a40-ad31-c7a2b0a2a703" ChangeDateTime="04/20/2018 20:11:06">
+    <Property Name="ElementName" Value="[SEIDR].[FileValidationDocMetaData].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileValidationDocMetaData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MetaDataID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b5019493-3544-4087-9fec-b547f6d7e49f" ChangeDateTime="05/09/2018 19:01:10">
+    <Property Name="ElementName" Value="[SEIDR].[FileSystemJob].[Destination]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileSystemJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Output" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d5dc5b90-bbfe-4c9a-81d4-784f0e611498" ChangeDateTime="05/09/2018 19:02:22">
+    <Property Name="ElementName" Value="[SEIDR].[FileSystemJob].[Output]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileSystemJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OutputPath" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="997fd997-a86b-4c2a-8fb9-40c03857a7a5" ChangeDateTime="06/01/2018 23:15:17">
+    <Property Name="ElementName" Value="[SEIDR].[FTPAccount].[Username]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FTPAccount]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e1464a91-f221-48b7-befc-4b5037e95209" ChangeDateTime="06/22/2018 01:26:24">
+    <Property Name="ElementName" Value="[SEIDR].[FileSystemOperation].[RequireDestination]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FileSystemOperation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RequireOutputPath" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ae5b8db7-27c0-4a84-bc56-880b4f1342b6" ChangeDateTime="10/04/2018 16:48:56">
+    <Property Name="ElementName" Value="[SEIDR].[LoaderJob].[OutputFilePath]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[LoaderJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OutputFileName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ceb0af3b-8b91-41e8-bd53-9f0aca7ae69f" ChangeDateTime="12/06/2018 23:54:38">
+    <Property Name="ElementName" Value="[SEIDR].[SimpleCleanFileJob].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[SimpleCleanFileJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="JobProfile_JobID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a0b10fb8-ea79-4641-89f9-6c8d809efeab" ChangeDateTime="12/07/2018 00:42:16">
+    <Property Name="ElementName" Value="[SEIDR].[SimpleCleanFileJob].[Encoding]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[SimpleCleanFileJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CodePage" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="88f0166e-443d-428f-bdde-3d6067ce3e25" ChangeDateTime="12/17/2018 17:55:58">
+    <Property Name="ElementName" Value="[SEIDR].[BatchScriptJob].[BatchCriptJobID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[BatchScriptJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BatchScriptJobID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa070c98-4825-4278-ad64-2adbf3ff8bc5" ChangeDateTime="02/26/2019 20:04:41">
+    <Property Name="ElementName" Value="[SEIDR].[EdiConversion].[JobProfile_JobId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[EdiConversion]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="JobProfile_JobID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c708b504-15ae-4600-9af4-f6ea193982c9" ChangeDateTime="06/01/2019 00:15:21">
+    <Property Name="ElementName" Value="[SEIDR].[FixWidthConversionJob].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[FixWidthConversionJob]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="JobProfile_JobID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3cdd5bb4-afbc-4d9d-a300-559647c6f5fb" ChangeDateTime="02/27/2020 16:29:37">
+    <Property Name="ElementName" Value="[SEIDR].[JobProfile_Job].[TriggerBranch]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[SEIDR].[JobProfile_Job]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TriggereBranch" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e00ac5a9-4654-4a57-befd-3f016c2cabeb" ChangeDateTime="11/25/2020 18:31:52">
+    <Property Name="ElementName" Value="[METRIX].[ExportSettings].[VendorName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[METRIX].[ExportSettings]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VendorID" />
+  </Operation>
+</Operations>

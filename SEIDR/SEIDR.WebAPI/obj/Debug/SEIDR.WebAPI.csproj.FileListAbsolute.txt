@@ -1,0 +1,16 @@
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\SEIDR.WebAPI.dll.config
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\SEIDR.WebAPI.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\SEIDR.WebAPI.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\SEIDR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\SEIDR.JobBase.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\Cymetrix.Andromeda.Encryption.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\SEIDR.JobBase.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\SEIDR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\SEIDR.xml
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\Cymetrix.Andromeda.Encryption.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\bin\Debug\Cymetrix.Andromeda.Encryption.dll.config
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\obj\Debug\SEIDR.WebAPI.csprojAssemblyReference.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\obj\Debug\SEIDR.WebAPI.csproj.CoreCompileInputs.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\obj\Debug\SEIDR.WebAPI.csproj.CopyComplete
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\obj\Debug\SEIDR.WebAPI.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.WebAPI\obj\Debug\SEIDR.WebAPI.pdb

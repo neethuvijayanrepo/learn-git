@@ -1,0 +1,15 @@
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\WinSCP.exe
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\SEIDR.DemoMap.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\SEIDR.DemoMap.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\SEIDR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\SEIDR.FileSystem.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\BouncyCastle.Crypto.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\WinSCPnet.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\SEIDR.FileSystem.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\SEIDR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\bin\Debug\SEIDR.xml
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\obj\Debug\SEIDR.DemoMap.csproj.AssemblyReference.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\obj\Debug\SEIDR.DemoMap.csproj.CoreCompileInputs.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\obj\Debug\SEIDR.DemoMap.csproj.CopyComplete
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\obj\Debug\SEIDR.DemoMap.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DemoMap\obj\Debug\SEIDR.DemoMap.pdb

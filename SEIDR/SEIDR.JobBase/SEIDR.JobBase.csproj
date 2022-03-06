@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{364639C6-A8BB-4A53-8023-02F023A8DFCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SEIDR.JobBase</RootNamespace>
+    <AssemblyName>SEIDR.JobBase</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cymetrix.Andromeda.Encryption\Cymetrix.Andromeda.Encryption.csproj">
+      <Project>{531A3431-D70C-4156-A94F-C19FE63DC2B9}</Project>
+      <Name>Cymetrix.Andromeda.Encryption</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR\SEIDR.csproj">
+      <Project>{81417F92-B840-4476-96B7-6D87D224FD78}</Project>
+      <Name>SEIDR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseContext.cs" />
+    <Compile Include="BasicLocalFileHelper.cs" />
+    <Compile Include="ChildExecutionInfo.cs" />
+    <Compile Include="ContextJobBase.cs" />
+    <Compile Include="DatabaseLookup.cs" />
+    <Compile Include="DatabaseLookupSet.cs" />
+    <Compile Include="HelperClasses\FileAssertionTestConfiguration.cs" />
+    <Compile Include="IJob.cs" />
+    <Compile Include="iJobExecutor.cs" />
+    <Compile Include="ExecutionStatus.cs" />
+    <Compile Include="JobExecutionCheckPoint.cs" />
+    <Compile Include="JobExecution.cs" />
+    <Compile Include="JobProfile.cs" />
+    <Compile Include="JobProfile_Job_SettingsFile.cs" />
+    <Compile Include="RegistrationFile.cs" />
+    <Compile Include="Status\ServiceStatus.cs" />
+    <Compile Include="Status\ThreadInfo.cs" />
+    <Compile Include="Status\ThreadStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JobBase.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

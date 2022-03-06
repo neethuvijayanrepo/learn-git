@@ -1,0 +1,15 @@
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\SEIDR.DataTransferLoad.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\SEIDR.DataTransferLoad.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\SEIDR.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\SEIDR.JobBase.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\Cymetrix.Andromeda.Encryption.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\SEIDR.JobBase.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\SEIDR.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\SEIDR.xml
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\Cymetrix.Andromeda.Encryption.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\bin\Debug\Cymetrix.Andromeda.Encryption.dll.config
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\obj\Debug\SEIDR.DataTransferLoad.csprojAssemblyReference.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\obj\Debug\SEIDR.DataTransferLoad.csproj.CoreCompileInputs.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\obj\Debug\SEIDR.DataTransferLoad.csproj.CopyComplete
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\obj\Debug\SEIDR.DataTransferLoad.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.DataTransferLoad\obj\Debug\SEIDR.DataTransferLoad.pdb

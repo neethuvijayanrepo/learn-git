@@ -1,0 +1,4 @@
+﻿CREATE TYPE [UTIL].[udt_IntID] AS TABLE (
+    [ID] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC));
+

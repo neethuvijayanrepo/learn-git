@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6210B0D-FD2F-4F7A-8079-EA81CDBB20D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SEIDR.MetrixProcessing</RootNamespace>
+    <AssemblyName>SEIDR.MetrixProcessing</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IgnoreBulkCopyAttribute.cs" />
+    <Compile Include="Invoice\AdjustmentDataStub.cs" />
+    <Compile Include="Invoice\ChargeDataStub.cs" />
+    <Compile Include="Invoice\FinancialClassDateRange.cs" />
+    <Compile Include="Invoice\InsurancePayers.cs" />
+    <Compile Include="Invoice\InvoiceRemark.cs" />
+    <Compile Include="Invoice\InvoiceResultCode.cs" />
+    <Compile Include="Invoice\InvoicingContext.cs" />
+    <Compile Include="Invoice\InvoiceRuleOverride.cs" />
+    <Compile Include="Invoice\PhysicianInvoiceJob.cs" />
+    <Compile Include="Invoice\Physician\EncounterContainer.cs" />
+    <Compile Include="Invoice\Physician\EncounterDetail.cs" />
+    <Compile Include="Invoice\Physician\InvoiceableTransaction_LineItem.cs" />
+    <Compile Include="Invoice\Physician\InvoicedTransaction_LineItem.cs" />
+    <Compile Include="Invoice\Physician\InvoicePreviewGenerator.cs" />
+    <Compile Include="Invoice\PreviousPlacementInfo.cs" />
+    <Compile Include="Invoice\Project_InvoiceSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SEIDR.FileSystem\SEIDR.FileSystem.csproj">
+      <Project>{90f07395-f05a-4555-9a46-517a15096eb0}</Project>
+      <Name>SEIDR.FileSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR.JobBase\SEIDR.JobBase.csproj">
+      <Project>{364639c6-a8bb-4a53-8023-02f023a8dfcd}</Project>
+      <Name>SEIDR.JobBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR\SEIDR.csproj">
+      <Project>{81417f92-b840-4476-96b7-6d87d224fd78}</Project>
+      <Name>SEIDR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

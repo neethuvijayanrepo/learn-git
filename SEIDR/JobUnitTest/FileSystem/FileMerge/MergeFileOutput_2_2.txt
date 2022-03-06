@@ -1,0 +1,4 @@
+AccountNumber	Facility	Balance	Account No	Facility	Charges
+A127	A	10.0	A127	 A	 132.42
+NB36082	B	84.39	NB36082	 B	 84.39
+T17	T	201.34	T17	 T	 172.10

@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>MIMIR</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{87db26f2-7626-4760-89b1-9718e77ba70d}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>MIMIR</RootNamespace>
+    <AssemblyName>MIMIR</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultSchema>SEIDR</DefaultSchema>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SuppressTSqlWarnings>
+    </SuppressTSqlWarnings>
+    <TreatTSqlWarningsAsErrors>True</TreatTSqlWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="SEIDR\" />
+    <Folder Include="SEIDR\Tables\" />
+    <Folder Include="SEIDR\Views\" />
+    <Folder Include="SEIDR\Functions\" />
+    <Folder Include="SEIDR\Stored Procedures\" />
+    <Folder Include="SEIDR\User Defined Types\" />
+    <Folder Include="Security\" />
+    <Folder Include="SEIDR\ChangeScripts" />
+    <Folder Include="AdHoc Queries" />
+    <Folder Include="UTIL\" />
+    <Folder Include="UTIL\Tables\" />
+    <Folder Include="Database Triggers\" />
+    <Folder Include="UTIL\Views\" />
+    <Folder Include="UTIL\Functions\" />
+    <Folder Include="UTIL\User Defined Types\" />
+    <Folder Include="UTIL\Stored Procedures" />
+    <Folder Include="METRIX\" />
+    <Folder Include="METRIX\Tables\" />
+    <Folder Include="REFERENCE\" />
+    <Folder Include="REFERENCE\Tables\" />
+    <Folder Include="REFERENCE\Views\" />
+    <Folder Include="REFERENCE\Functions\" />
+    <Folder Include="CONFIG\" />
+    <Folder Include="CONFIG\Stored Procedures\" />
+    <Folder Include="CONFIG\Views" />
+    <Folder Include="REFERENCE\Stored Procedures" />
+    <Folder Include="Security\Functions" />
+    <Folder Include="Security\Tables" />
+    <Folder Include="BuildTests" />
+    <Folder Include="CONFIG\Functions\" />
+    <Folder Include="CONFIG\Tables\" />
+    <Folder Include="METRIX\Stored Procedures" />
+    <Folder Include="METRIX\Views" />
+    <Folder Include="METRIX\Change Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="SEIDR\Tables\JobExecution_Note.sql" />
+    <Build Include="SEIDR\Tables\Priority.sql" />
+    <Build Include="SEIDR\Tables\ScheduleRule.sql" />
+    <Build Include="SEIDR\Tables\ScheduleRuleCluster.sql" />
+    <Build Include="SEIDR\Tables\ScheduleRuleCluster_ScheduleRule.sql" />
+    <Build Include="SEIDR\Tables\Schedule_ScheduleRuleCluster.sql" />
+    <Build Include="SEIDR\Tables\ExecutionStatus.sql" />
+    <Build Include="SEIDR\Tables\DM_Test.sql" />
+    <Build Include="SEIDR\Tables\Job.sql" />
+    <Build Include="SEIDR\Tables\JobProfile_Job.sql" />
+    <Build Include="SEIDR\Tables\Schedule.sql" />
+    <Build Include="SEIDR\Tables\JobExecution.sql" />
+    <Build Include="SEIDR\Tables\JobExecution_ExecutionStatus.sql" />
+    <Build Include="SEIDR\Tables\JobProfile.sql" />
+    <Build Include="SEIDR\Tables\JobExecutionError.sql" />
+    <Build Include="SEIDR\Views\vw_JobExecution.sql" />
+    <Build Include="SEIDR\Views\vw_JobExecutionHistory.sql" />
+    <Build Include="SEIDR\Functions\ufn_CheckScheduleRule.sql" />
+    <Build Include="SEIDR\Functions\ufn_CheckScheduleRuleCluster.sql" />
+    <Build Include="SEIDR\Functions\ufn_CheckSchedule.sql" />
+    <Build Include="SEIDR\Functions\ufn_GetDays.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecutionError_i.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_DataManagerTest.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_DatamanagerTest2.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_StartWork.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_sl_Work.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_CheckSchedule.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_ExecutionStatus_i.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_Job_Validate.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_SetStatus.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Requeue.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_Job_RegisterFile.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_RegisterSpawnJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_ExecutionStatus_sl.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_sl_FileWatch.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_u_InvalidPath.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_sl.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_CleanWorking.sql" />
+    <Build Include="SEIDR\User Defined Types\udt_JobMetaData.sql" />
+    <Build Include="Security\SEIDR.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecutionDetail_RePrioritize.sql" />
+    <Build Include="SEIDR\Tables\FileSystemJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSystem_ss_JobExecution.sql" />
+    <Build Include="SEIDR\Tables\FileSystemOperation.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_UnWork.sql" />
+    <Build Include="Security\temp.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_ss_Cancel.sql" />
+    <Build Include="SEIDR\Tables\DatabaseLookup.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_DatabaseLookup_ss.sql" />
+    <Build Include="SEIDR\Tables\User_TimeOffset.sql" />
+    <Build Include="SEIDR\Functions\ufn_GetUserTime.sql" />
+    <Build Include="SEIDR\Tables\JobExecutionCheckPoint.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecutionCheckPoint_i.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecutionCheckPoint_ss_GetLatest.sql" />
+    <Build Include="SEIDR\Tables\JobReport.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobReport_sl.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobReport_iu.sql" />
+    <Build Include="SEIDR\Tables\DocMetaData.sql" />
+    <Build Include="SEIDR\Tables\DocMetaDataColumn.sql" />
+    <Build Include="SEIDR\Tables\FileValidationJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileValidationJob_ss.sql" />
+    <Build Include="SEIDR\User Defined Types\udt_DocMetaDataColumn.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileValidationDocMetaData_i.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_Helper_CreateTableToModel.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="SEIDR\Stored Procedures\usp_PGPJobConfiguration_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_SpawnJobConfiguration_sl.sql" />
+    <Build Include="SEIDR\Tables\FTPAccount.sql" />
+    <Build Include="SEIDR\Tables\FTPJob.sql" />
+    <Build Include="SEIDR\Tables\FTPProtocol.sql" />
+    <Build Include="SEIDR\Tables\FTPOperation.sql" />
+    <None Include="AdHoc Queries\HelpText Queries.sql" />
+    <Build Include="UTIL\Tables\DDL_ChangeLog.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_CheckSchedule_DEBUG.sql" />
+    <Build Include="Database Triggers\DbTrg_backup_objects.sql" />
+    <Build Include="Security\UTIL.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_CloneSteps.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Rollback.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Note_i.sql" />
+    <Build Include="SEIDR\Views\vw_JobExecution_Note.sql" />
+    <Build Include="SEIDR\Views\vw_JobProfile_MissingExecution.sql" />
+    <Build Include="SEIDR\Tables\DemoMapJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_DemoMapJob_ss.sql" />
+    <Build Include="SEIDR\Views\vw_Schedule.sql" />
+    <Build Include="SEIDR\Tables\SSIS_Package.sql" />
+    <Build Include="SEIDR\Tables\LoaderJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecutionError_d.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_DocMetaData_i.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_DocMetaDataColumn_sl.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_LoaderJob_ss.sql" />
+    <Build Include="SEIDR\Tables\PGPJob.sql" />
+    <Build Include="SEIDR\Tables\PGPOperation.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileValidationDocMetaDataColumn_sl.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FTPJobConfiguration_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Schedule_OnDemand.sql" />
+    <Build Include="SEIDR\Tables\ScheduleRuleHistory.sql" />
+    <Build Include="SEIDR\Tables\JobProfile_Job_Parent.sql" />
+    <Build Include="SEIDR\Tables\Log.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_Log_i.sql" />
+    <Build Include="UTIL\Functions\ufn_CheckEnvironment.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Functions\ufn_CreateForeignKeyDefinition.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Functions\ufn_CreateIndexDefinition.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Functions\ufn_CreateStatsDefinition.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Functions\ufn_ForeignKey_CheckDescendentTable.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Functions\ufn_ForeignKey_CheckDescendentTable_Exclusion.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Functions\ufn_ForeignKey_GetCircularLevel.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Functions\ufn_GetDatabaseProperty.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Functions\ufn_GetForeignKey_JoinCondition.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Views\vw_CachedPlans.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Views\vw_DataPopHelper.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Views\vw_ForeignKeys.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Views\vw_Indexes.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Views\vw_IndexStats.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Views\vw_MissingDefaultConstraints.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="UTIL\Views\vw_OutdatedStats.sql">
+      <SuppressTSqlWarnings>
+      </SuppressTSqlWarnings>
+    </Build>
+    <Build Include="SEIDR\Functions\ufn_CheckParentSchedule.sql" />
+    <Build Include="SEIDR\Tables\QueueRejection.sql" />
+    <Build Include="SEIDR\Tables\FileConcatenationJob.sql" />
+    <Build Include="SEIDR\Views\vw_JobProfile_Job_Parent.sql" />
+    <Build Include="SEIDR\Views\vw_JobLog.sql" />
+    <Build Include="SEIDR\Views\vw_LoaderJob.sql" />
+    <Build Include="SEIDR\Views\vw_JobProfile_Job.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_help.sql" />
+    <Build Include="SEIDR\Views\vw_JobProfile.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_Job_QueueLogging.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_Job_iu.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_SetParentStep.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_LoaderJob_iu.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_Job_ShiftSteps.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileSystemJob_iu.sql" />
+    <Build Include="SEIDR\Views\vw_DocMetaData.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileValidationJob_iu.sql" />
+    <Build Include="UTIL\User Defined Types\udt_IntegerIdsTable.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_DemoMapJob_iu.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FTPJob_iu.sql" />
+    <None Include="SEIDR\ChangeScripts\PGPOperation Insert.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_PackageCategory_SetThreadID.sql" />
+    <Build Include="SEIDR\Views\vw_ThreadID_Usage.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_SetCurrentStep.sql" />
+    <Build Include="UTIL\Views\vw_Stats.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileConcatenationJob_iu.sql" />
+    <Build Include="SEIDR\Tables\SpawnJob.sql" />
+    <Build Include="SEIDR\User Defined Types\udt_SpawnJob.sql" />
+    <Build Include="SEIDR\Views\vw_LogLatest.sql" />
+    <Build Include="SEIDR\Views\vw_LogWorking.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_sl_SpawnChain.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_ReQueued.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_SpawnJob_iu.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_SetSchedule.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_SetRegistrationInfo.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_i.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileConcatenationSettings_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSearch.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileConcatenationJob_ss.sql" />
+    <Build Include="SEIDR\Views\vw_JobProfile_ProcessingDate.sql" />
+    <Build Include="SEIDR\Views\vw_JobProfile_ChildProfile.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_PGPJob_iu.sql" />
+    <Build Include="METRIX\Tables\ExportSettings.sql" />
+    <Build Include="Security\METRIX.sql" />
+    <Build Include="SEIDR\Tables\ScheduleDatePart.sql" />
+    <Build Include="SEIDR\Tables\SimpleCleanFileJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_SimpleCleanFileJob_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_SimpleCleanFileJob_iu.sql" />
+    <Build Include="SEIDR\Views\vw_JobExecution_Detail.sql" />
+    <Build Include="UTIL\Functions\ufn_PathItem_GetName.sql" />
+    <Build Include="SEIDR\Views\vw_SpawnJob.sql" />
+    <Build Include="SEIDR\Views\vw_SimpleCleanFileJob.sql" />
+    <Build Include="SEIDR\Views\vw_FTPJob.sql" />
+    <Build Include="SEIDR\Views\vw_FileValidationJob.sql" />
+    <Build Include="SEIDR\Views\vw_FileSystemJob.sql" />
+    <Build Include="SEIDR\Views\vw_FileConcatenationJob.sql" />
+    <Build Include="SEIDR\Tables\BatchScriptJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_BatchScriptJob_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_BatchScriptJob_iu.sql" />
+    <Build Include="SEIDR\Views\vw_BatchScriptJob.sql" />
+    <Build Include="UTIL\Views\vw_Default_Constraints.sql" />
+    <Build Include="UTIL\Views\vw_Constraints.sql" />
+    <Build Include="UTIL\Views\vw_Check_Constraints.sql" />
+    <Build Include="SEIDR\Views\vw_FilePath.sql" />
+    <Build Include="SEIDR\Functions\ufn_ScheduleRule_GetDescription.sql" />
+    <Build Include="SEIDR\Functions\ufn_Schedule_GetDescription.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Resolve.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_Job_SetSequenceSchedule.sql" />
+    <Build Include="UTIL\Views\vw_ProcedureInfo.sql" />
+    <Build Include="UTIL\Stored Procedures\usp_Procedure_GetScript.sql" />
+    <Build Include="SEIDR\Views\vw_ScheduleRuleCluster.sql" />
+    <Build Include="SEIDR\Views\vw_Job_ConfigurationProcedure.sql" />
+    <Build Include="SEIDR\Views\vw_JobExecution_FilePath.sql" />
+    <Build Include="SEIDR\Views\vw_JobExecution_Rollback_Helper.sql" />
+    <Build Include="SEIDR\Views\vw_JobProfile_Parent.sql" />
+    <Build Include="SEIDR\Tables\JobProfileHistory.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_GetConfigurationScript.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_Job_GetConfigurationScript.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_ScheduleSearch.sql" />
+    <Build Include="SEIDR\Functions\ufn_ApplyDateMask.sql" />
+    <None Include="SEIDR\ChangeScripts\ExecutionStatus_for_Metrix_Export_C.sql" />
+    <None Include="SEIDR\ChangeScripts\ExecutionStatus_for_Pending_Details.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_u_LiveVox.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_i_LiveVox.sql" />
+    <Build Include="UTIL\Views\vw_Triggers.sql" />
+    <Build Include="UTIL\Views\vw_JobExecution_IdentityGap.sql" />
+    <Build Include="SEIDR\Views\vw_LogStepLatest.sql" />
+    <Build Include="UTIL\Functions\ufn_JobExecutionID_GetNext_IdentityValue.sql" />
+    <Build Include="UTIL\Functions\ufn_JobExecutionID_GetNext_IdentityRange.sql" />
+    <Build Include="UTIL\Functions\ufn_GetRange.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Help.sql" />
+    <Build Include="SEIDR\Views\vw_LoadProfileID.sql" />
+    <Build Include="SEIDR\Views\vw_JobExecution_LoadProfileID.sql" />
+    <Build Include="REFERENCE\Views\vw_JobExecutionHistory.sql" />
+    <Build Include="REFERENCE\Functions\ufn_CompareOrganization.sql" />
+    <Build Include="UTIL\Stored Procedures\usp_IdentityGap_Range_sl.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_ScheduleRule_Propagate.sql" />
+    <Build Include="Security\CONFIG.sql" />
+    <Build Include="REFERENCE\Tables\UserKey.sql" />
+    <Build Include="REFERENCE\Tables\Project.sql" />
+    <Build Include="REFERENCE\Tables\Organization.sql" />
+    <Build Include="REFERENCE\Functions\ufn_CompareProfile_Organization.sql" />
+    <Build Include="REFERENCE\Functions\ufn_Check_Project_Organization.sql" />
+    <Build Include="REFERENCE\Views\vw_Project_Organization.sql" />
+    <Build Include="Security\REFERENCE.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_Job_d.sql" />
+    <Build Include="UTIL\Views\vw_ForeignKeys_Check.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobProfile_SetStopAfterStepNumber.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobExecution_SetStopAfterStepNumber.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobExecution_SynchKeys.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobProfile_Job_Parent_d.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobProfile_Rollback.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_Package_u.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_Schedule_d.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_Schedule_i.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_Schedule_ScheduleRuleCluster_d.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_Schedule_ScheduleRuleCluster_i.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_Schedule_u.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_ScheduleRule_i.sql" />
+    <Build Include="CONFIG\Views\vw_JobExecution_JobProfile_KeyMismatch.sql" />
+    <Build Include="CONFIG\Views\vw_JobProfileHistory.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_ScheduleRuleCluster_i.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_FTPAccount_d.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_FTPAccount_i.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_FTPAccount_u.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Organization_i.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Project_iu.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_User_iu.sql" />
+    <Build Include="Security\Functions\ufn_GetDomainName.sql" />
+    <Build Include="Security\Functions\ufn_GetTimeOffset.sql" />
+    <Build Include="Security\Functions\ufn_GetTimeOffset_UserName.sql" />
+    <Build Include="Security\Tables\User.sql" />
+    <Build Include="Security\SECURITY.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_u.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_d.sql" />
+    <Build Include="SEIDR\Tables\JobProfile_Job_Parent_Archive.sql" />
+    <Build Include="UTIL\User Defined Types\udt_BigIntID.sql" />
+    <Build Include="UTIL\User Defined Types\udt_IntID.sql" />
+    <Build Include="UTIL\User Defined Types\udt_SmallIntID.sql" />
+    <Build Include="UTIL\User Defined Types\udt_TinyIntID.sql" />
+    <Build Include="REFERENCE\Functions\usp_Organization_VerifyFolder.sql" />
+    <Build Include="REFERENCE\Views\vw_FTPAccount.sql" />
+    <Build Include="REFERENCE\Views\vw_JobExecution.sql" />
+    <Build Include="REFERENCE\Views\vw_JobExecution_Log.sql" />
+    <Build Include="REFERENCE\Views\vw_JobExecution_Note.sql" />
+    <Build Include="REFERENCE\Views\vw_JobExecution_Parent.sql" />
+    <Build Include="REFERENCE\Views\vw_Schedule.sql" />
+    <Build Include="SEIDR\Tables\EdiConversion.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_EdiConversion_ss.sql" />
+    <Build Include="SEIDR\Views\vw_EDIConversionJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_EdiConversionJob_iu.sql" />
+    <None Include="BuildTests\ScheduleCheck.sql" />
+    <Build Include="UTIL\Views\vw_MissingIndex.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_JobProfile_u_GetConfigurationScript.sql" />
+    <Build Include="SEIDR\Views\vw_FilePath_ShortHand.sql" />
+    <Build Include="REFERENCE\Views\vw_Organization_Folder.sql" />
+    <Build Include="UTIL\Functions\ufn_CleanField.sql" />
+    <Build Include="CONFIG\Functions\ufn_ShortHandPath_Profile.sql" />
+    <Build Include="CONFIG\Functions\ufn_ShortHandPath.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Organization_u.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobProfile_Job_SetTrigger.sql" />
+    <Build Include="REFERENCE\Views\vw_JobExecutor_Threads.sql" />
+    <Build Include="CONFIG\Functions\ufn_GetShortHandPath_Profile.sql" />
+    <Build Include="CONFIG\Functions\ufn_GetShortHandPath.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileValidationJob_MarkMetaDataRefresh.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_RunNow.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileSortJob_u.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileSortJob_i.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_Profile_sl_Description.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfileJob_sl_GetByOrg.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_sl_Project.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_sl_Organization.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_sl_GetByOrg.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_sl_Description.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_sl_UserKey.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_sl_GetByOrg.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Detail_RollBack.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Detail_Log.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Detail_History.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_Detail.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_ExecutionStatus_sl_Description.sql" />
+    <Build Include="SEIDR\Tables\JobProfile_Job_SettingsFile.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_Job_SettingsFile_ss.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobProfile_Job_SettingsFile_iu.sql" />
+    <Build Include="SEIDR\Views\vw_PGPJob.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_FinalizeOrganizationID.sql" />
+    <Build Include="CONFIG\Tables\SSIS_Package_History.sql" />
+    <Build Include="SEIDR\Views\vw_SettingsFile.sql" />
+    <Build Include="UTIL\Functions\ufn_PathItem_GetRootName.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FixWidthConversionJob_iu.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_CheckSchedule_DEBUG_PROFILE.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Project_SetThroughDate.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Organization_SetThroughDate.sql" />
+    <Build Include="UTIL\Functions\ufn_MigrationPath.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_NordisSplitJob_iu.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_LexisNexisParseJob_iu.sql" />
+    <Build Include="SEIDR\Views\vw_LexisNexisParseJob.sql" />
+    <Build Include="SEIDR\Views\vw_NordisSplitJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_DatabaseLookup_sl.sql" />
+    <Build Include="METRIX\Stored Procedures\usp_ExportSetting_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_i_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_u_ExportBatchID.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobProfile_ExportSettings_iu.sql" />
+    <Build Include="METRIX\Views\vw_ExportSettings.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_ExportSettings_iu.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_UserKey_u.sql" />
+    <Build Include="REFERENCE\Views\vw_JobProfile.sql" />
+    <None Include="SEIDR\ChangeScripts\MET-14479.sql" />
+    <Build Include="SEIDR\Tables\FileSizeCheckJob.sql" />
+    <Build Include="SEIDR\Tables\FileSizeHistory.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSizeCheckJob_CheckFile.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileSizeCheckJob_iu.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSizeHistory_u.sql" />
+    <Build Include="SEIDR\Views\vw_FileSizeCheckJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSizeHistory_Backfill.sql" />
+    <Build Include="SEIDR\Views\vw_FileSizeHistory.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSizeHistory_Clear.sql" />
+    <Build Include="SEIDR\Functions\ufn_GetJobProfile_JobID.sql" />
+    <Build Include="Security\Functions\ufn_IsSystemUser.sql" />
+    <Build Include="SEIDR\Views\vw_DemoMapJob.sql" />
+    <Build Include="SEIDR\Tables\FileAssertionTestJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileAssertionTestConfiguration_ss.sql" />
+    <Build Include="UTIL\Stored Procedures\usp_CleanData.sql" />
+    <Build Include="SEIDR\Tables\FileMergeJob.sql" />
+    <Build Include="CONFIG\Views\vw_JobExecution_NextStep.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileMergeJobSettings_ss.sql" />
+    <Build Include="SEIDR\Tables\StagingToAndromedaExportStatusJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_StagingToAndromedaExportStatusJobSettings_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_StagingToAndromedaExportStatusJob_iu.sql" />
+    <Build Include="REFERENCE\Tables\Organization_Contact.sql" />
+    <Build Include="REFERENCE\Views\vw_Organization_Contact.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Organization_Contact_i.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Organization_Contact_u.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Organization_Contact_d.sql" />
+    <Build Include="REFERENCE\Views\vw_JobProfile_Contacts.sql" />
+    <Build Include="REFERENCE\Views\vw_JobExecution_Contacts.sql" />
+    <Build Include="REFERENCE\Views\vw_Organization_NewContact_Helper.sql" />
+    <Build Include="REFERENCE\Tables\Contact.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Contact_iu.sql" />
+    <Build Include="REFERENCE\Tables\Contact_History.sql" />
+    <Build Include="REFERENCE\Tables\ContactNote.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_ContactNote_i.sql" />
+    <Build Include="SEIDR\Tables\JobProfileNote.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_ContactNote_d.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfileNote_i.sql" />
+    <Build Include="SEIDR\Views\vw_JobProfileNote.sql" />
+    <Build Include="REFERENCE\Views\vw_ContactNote.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Contact_d.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfileNote_d.sql" />
+    <Build Include="REFERENCE\Stored Procedures\usp_Organization_Contact_i_Bulk.sql" />
+    <Build Include="UTIL\User Defined Types\udt_Varchar500.sql" />
+    <Build Include="UTIL\Functions\ufn_SplitVarchar500.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_DatabaseLookup_sl.sql" />
+    <Build Include="METRIX\Stored Procedures\usp_ExportSetting_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_i_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobExecution_u_ExportBatchID.sql" />
+    <Build Include="CONFIG\Stored Procedures\usp_JobProfile_ExportSettings_iu.sql" />
+    <Build Include="METRIX\Views\vw_ExportSettings.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_ExportSettings_iu.sql" />
+    <Build Include="SEIDR\Tables\FileSizeCheckJob.sql" />
+    <Build Include="SEIDR\Tables\FileSizeHistory.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSizeCheckJob_CheckFile.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileSizeCheckJob_iu.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSizeHistory_u.sql" />
+    <Build Include="SEIDR\Views\vw_FileSizeCheckJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSizeHistory_Backfill.sql" />
+    <Build Include="SEIDR\Views\vw_FileSizeHistory.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileSizeHistory_Clear.sql" />
+    <Build Include="SEIDR\Functions\ufn_GetJobProfile_JobID.sql" />
+    <Build Include="Security\Functions\ufn_IsSystemUser.sql" />
+    <Build Include="SEIDR\Views\vw_DemoMapJob.sql" />
+    <Build Include="SEIDR\Tables\FileAssertionTestJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileAssertionTestConfiguration_ss.sql" />
+    <Build Include="UTIL\Stored Procedures\usp_CleanData.sql" />
+    <Build Include="SEIDR\Tables\FileMergeJob.sql" />
+    <Build Include="CONFIG\Views\vw_JobExecution_NextStep.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_FileMergeJobSettings_ss.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_FileMergeJob_iu.sql" />
+    <Build Include="CONFIG\Views\vw_JobProfile_Branch.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_DMAPOutputAssertionJob_iu.sql" />
+    <Build Include="SEIDR\Views\vw_FileAssertionTestJob.sql" />
+    <Build Include="SEIDR\Views\vw_FileMergeJob.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_Job_MoveBranch.sql" />
+    <Build Include="SEIDR\Views\vw_StagingToAndromedaExportStatusJob.sql" />
+    <Build Include="UTIL\Stored Procedures\usp_GetMissingFiles.sql" />
+    <Build Include="METRIX\Tables\ExportType.sql" />
+    <Build Include="METRIX\Tables\ImportType.sql" />
+    <Build Include="METRIX\Tables\Vendor.sql" />
+    <None Include="METRIX\Change Scripts\ExportType population.sql" />
+    <Build Include="SEIDR\Stored Procedures\usp_JobProfile_EpicSplitJob_iu.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SEIDR\ChangeScripts\Service.sql" />
+    <None Include="SEIDR\ChangeScripts\FTP.sql" />
+    <None Include="Script.PostDeployment.sql" />
+    <None Include="MIMIR_TEST.publish.xml" />
+    <None Include="SEIDR\ChangeScripts\Schedule.sql" />
+    <None Include="MIMIR.publish.xml" />
+    <None Include="MIMIR_LOCAL.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NCIHCTSTSQL07.scmp" />
+    <None Include="AdHoc Queries\Profile+ Job Query.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="MIMIR.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="BuildTests\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+</Project>

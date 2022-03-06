@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90F07395-F05A-4555-9A46-517A15096EB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SEIDR.FileSystem</RootNamespace>
+    <AssemblyName>SEIDR.FileSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinSCPnet, Version=1.5.5.8455, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinSCP.5.13.2\lib\net\WinSCPnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DocMetaData.cs" />
+    <Compile Include="DocMetaDataColumn.cs" />
+    <Compile Include="DocMetaDataSet.cs" />
+    <Compile Include="EDI\EdiConversion.cs" />
+    <Compile Include="EDI\EdiConversionJob.cs" />
+    <Compile Include="EDI\EdiFileType.cs" />
+    <Compile Include="FileConcatenation\FileConcatenationJob.cs" />
+    <Compile Include="FileConcatenation\FileConcatenationSettings.cs" />
+    <Compile Include="FileConcatenation\FileMergeJob.cs" />
+    <Compile Include="FileConcatenation\FileMergeJobSettings.cs" />
+    <Compile Include="FileConversion\FixWidthConversion.cs" />
+    <Compile Include="FileOperation.cs" />
+    <Compile Include="FileSort\FileSortJob.cs" />
+    <Compile Include="FileSplitting\LexisNexisParseJob.cs" />
+    <Compile Include="FileSplitting\NordisSplitJob.cs" />
+    <Compile Include="FileSystemContext.cs" />
+    <Compile Include="FileSystemJob.cs" />
+    <Compile Include="FileValidation\FileValidationJob.cs" />
+    <Compile Include="FileValidation\FileValidationJobConfiguration.cs" />
+    <Compile Include="FileValidation\FileSizeCheckJob.cs" />
+    <Compile Include="FileValidation\SizeCheckModel.cs" />
+    <Compile Include="FileValidation\ValidationError.cs" />
+    <Compile Include="FS.cs" />
+    <Compile Include="FTP\FTP.cs" />
+    <Compile Include="FTP\FTPConfiguration.cs" />
+    <Compile Include="FTP\FTPContext.cs" />
+    <Compile Include="FTP\FTPJob.cs" />
+    <Compile Include="FTP\FTPOperation.cs" />
+    <Compile Include="FTP\FTPResult.cs" />
+    <Compile Include="PGP\ValidationError.cs" />
+    <Compile Include="PGP\PGP.cs" />
+    <Compile Include="PGP\PGPConfiguration.cs" />
+    <Compile Include="PGP\PGPJob.cs" />
+    <Compile Include="PGP\PGPOperation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultStatusCode.cs" />
+    <Compile Include="Scripting\BatchScriptJob.cs" />
+    <Compile Include="Scripting\BatchScriptJobConfiguration.cs" />
+    <Compile Include="SimpleClean\SimpleClean.cs" />
+    <Compile Include="SimpleClean\SimpleCleanConfiguration.cs" />
+    <Compile Include="Spawn\SpawnConfiguration.cs" />
+    <Compile Include="Spawn\SpawnJob.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cymetrix.Andromeda.Encryption\Cymetrix.Andromeda.Encryption.csproj">
+      <Project>{531a3431-d70c-4156-a94f-c19fe63dc2b9}</Project>
+      <Name>Cymetrix.Andromeda.Encryption</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR.JobBase\SEIDR.JobBase.csproj">
+      <Project>{364639c6-a8bb-4a53-8023-02f023a8dfcd}</Project>
+      <Name>SEIDR.JobBase</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SEIDR\SEIDR.csproj">
+      <Project>{81417f92-b840-4476-96b7-6d87d224fd78}</Project>
+      <Name>SEIDR</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FS.ApplyDateMask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\WinSCP.5.13.2\build\WinSCP.targets" Condition="Exists('..\packages\WinSCP.5.13.2\build\WinSCP.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\WinSCP.5.13.2\build\WinSCP.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\WinSCP.5.13.2\build\WinSCP.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

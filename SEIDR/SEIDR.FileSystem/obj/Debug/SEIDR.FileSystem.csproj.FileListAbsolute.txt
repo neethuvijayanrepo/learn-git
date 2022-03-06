@@ -1,0 +1,13 @@
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\bin\Debug\WinSCP.exe
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\bin\Debug\SEIDR.FileSystem.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\bin\Debug\SEIDR.FileSystem.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\bin\Debug\BouncyCastle.Crypto.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\bin\Debug\Cymetrix.Andromeda.Encryption.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\bin\Debug\WinSCPnet.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\bin\Debug\Cymetrix.Andromeda.Encryption.pdb
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\bin\Debug\Cymetrix.Andromeda.Encryption.dll.config
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\obj\Debug\SEIDR.FileSystem.csproj.AssemblyReference.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\obj\Debug\SEIDR.FileSystem.csproj.CoreCompileInputs.cache
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\obj\Debug\SEIDR.FileSystem.csproj.CopyComplete
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\obj\Debug\SEIDR.FileSystem.dll
+D:\MetrixGitNew\metrix_git\SEIDR\SEIDR.FileSystem\obj\Debug\SEIDR.FileSystem.pdb

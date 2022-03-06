@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Letters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Letter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:int" name="LetterInstanceID"/>
+              <xs:element type="xs:short" name="ProjectID"/>
+              <xs:element type="xs:byte" name="LetterSeriesTypeID"/>
+              <xs:element type="xs:string" name="LetterSeriesType"/>
+              <xs:element type="xs:short" name="LetterSeriesID"/>
+              <xs:element type="xs:string" name="LetterSeries"/>
+              <xs:element type="xs:short" name="LetterFormatID"/>
+              <xs:element type="xs:string" name="LetterFormat"/>
+              <xs:element type="xs:string" name="LetterFormatDescription"/>
+              <xs:element type="xs:byte" name="LetterFormatTypeID"/>
+              <xs:element type="xs:string" name="LetterFormatType"/>
+              <xs:element type="xs:date" name="StatementDate"/>
+              <xs:element type="xs:date" name="StatementDueDate"/>
+              <xs:element type="xs:date" name="GenerationDate"/>
+              <xs:element type="xs:int" name="AccountID"/>
+              <xs:element type="xs:string" name="AccountNumber"/>
+              <xs:element type="xs:string" name="MedicalRecordNumber"/>
+              <xs:element type="xs:date" name="AdmissionDate"/>
+              <xs:element type="xs:int" name="MasterAccountID"/>
+              <xs:element type="xs:date" name="GuarantorBirthDate" minOccurs="0"/>
+              <xs:element type="xs:string" name="GuarantorLanguageCode" minOccurs="0"/>
+              <xs:element type="xs:int" name="FacilityID"/>
+              <xs:element name="AccountMailInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="SendToFirstName"/>
+                    <xs:element type="xs:string" name="SendToLastName"/>
+                    <xs:element type="xs:string" name="SendToAddress1"/>
+                    <xs:element type="xs:string" name="SendToAddress2" minOccurs="0"/>
+                    <xs:element type="xs:string" name="SendToCity"/>
+                    <xs:element type="xs:string" name="SendToState"/>
+                    <xs:element type="xs:string" name="SendToZip"/>
+                    <xs:element type="xs:string" name="SendToCountryCode" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PaymentPlan" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="PaymentPlanID"/>
+                    <xs:element type="xs:int" name="PaymentPlanItemID"/>
+                    <xs:element type="xs:float" name="PaymentAmountDue"/>
+                    <xs:element type="xs:date" name="PaymentDateDue"/>
+                    <xs:element type="xs:date" name="SetUpPlanDate"/>
+                    <xs:element type="xs:string" name="Frequency"/>
+                    <xs:element type="xs:short" name="NumberOfPayments"/>
+                    <xs:element type="xs:short" name="Interval"/>
+                    <xs:element type="xs:date" name="LastDatePaid" minOccurs="0"/>
+                    <xs:element type="xs:float" name="NextPaymentAmountDue" minOccurs="0"/>
+                    <xs:element type="xs:date" name="NextPaymentDateDue" minOccurs="0"/>
+                    <xs:element type="xs:float" name="FirstPaymentAmount"/>
+                    <xs:element type="xs:float" name="SecondPaymentAmount" minOccurs="0"/>
+                    <xs:element type="xs:date" name="FirstPaymentDateDue"/>
+                    <xs:element type="xs:date" name="SecondPaymentDateDue" minOccurs="0"/>
+                    <xs:element type="xs:string" name="OrdinalSecondPaymentDueDate" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:float" name="BalanceToPayInFull"/>
+              <xs:element type="xs:string" name="OCRCode" minOccurs="0"/>
+              <xs:element type="xs:float" name="TotalCharges"/>
+              <xs:element type="xs:float" name="Charges_Client"/>
+              <xs:element type="xs:float" name="InsurancePayments"/>
+              <xs:element type="xs:float" name="PatientPayments"/>
+              <xs:element type="xs:float" name="Adjustments"/>
+              <xs:element type="xs:float" name="InsuranceBalance"/>
+              <xs:element type="xs:float" name="PatientBalance"/>
+              <xs:element type="xs:float" name="AccountBalance"/>
+              <xs:element type="xs:float" name="INS_Charges"/>
+              <xs:element type="xs:float" name="INS_InsurancePayments"/>
+              <xs:element type="xs:float" name="INS_PatientPayments"/>
+              <xs:element type="xs:float" name="INS_Adjustments"/>
+              <xs:element type="xs:float" name="INS_InsuranceBalance"/>
+              <xs:element type="xs:float" name="INS_Balance"/>
+              <xs:element type="xs:byte" name="Claims"/>
+              <xs:element name="Accounts">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Account" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:int" name="FacilityID"/>
+                          <xs:element type="xs:int" name="AccountID"/>
+                          <xs:element type="xs:string" name="AccountNumber"/>
+                          <xs:element type="xs:string" name="PatientName"/>
+                          <xs:element type="xs:string" name="ServiceLocation"/>
+                          <xs:element type="xs:date" name="AdmissionDate"/>
+                          <xs:element type="xs:float" name="ChargesClient"/>
+                          <xs:element type="xs:float" name="InsurancePaymentsClient"/>
+                          <xs:element type="xs:float" name="PatientPaymentsClient"/>
+                          <xs:element type="xs:float" name="AdjustmentsClient"/>
+                          <xs:element type="xs:float" name="InsuranceBalanceClient"/>
+                          <xs:element type="xs:float" name="PatientBalanceClient"/>
+                          <xs:element type="xs:float" name="AccountBalanceClient"/>
+                          <xs:element type="xs:string" name="LastLetterFormat" minOccurs="0"/>
+                          <xs:element type="xs:string" name="LetterText" minOccurs="0"/>
+                          <xs:element name="Charges" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Charge" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="RevenueGroup" minOccurs="0"/>
+                                      <xs:element type="xs:float" name="Amount"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Transactions" minOccurs="0">
+                            <xs:complexType>
+                              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                <xs:element name="Transaction">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="TransactionType"/>
+                                      <xs:element type="xs:string" name="SourceCode"/>
+                                      <xs:element type="xs:string" name="TypeCode"/>
+                                      <xs:element type="xs:float" name="Amount"/>
+                                      <xs:element type="xs:date" name="LastPostingDate"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:choice>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Insurances" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Insurance" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="SequenceNumber"/>
+                          <xs:element type="xs:string" name="InsuranceSequence"/>
+                          <xs:element type="xs:int" name="PayerMasterID"/>
+                          <xs:element type="xs:string" name="PayerCode"/>
+                          <xs:element type="xs:string" name="PayerName" minOccurs="0"/>
+                          <xs:element type="xs:string" name="PolicyNumber" minOccurs="0"/>
+                          <xs:element type="xs:string" name="PolicyHolderName"/>
+                          <xs:element type="xs:string" name="ServiceType"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Agings">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Aging" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="AccountAgingType"/>
+                          <xs:element type="xs:float" name="CurrentBal"/>
+                          <xs:element type="xs:float" name="Days30Bal"/>
+                          <xs:element type="xs:float" name="Days60Bal"/>
+                          <xs:element type="xs:float" name="Days90Bal"/>
+                          <xs:element type="xs:float" name="Days120Bal"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

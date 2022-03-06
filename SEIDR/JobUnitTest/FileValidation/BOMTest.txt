@@ -1,0 +1,4 @@
+﻿SomeFile Content|Column2|COlumn3
+
+C ontent|Col
+umn2 split|Col3 data

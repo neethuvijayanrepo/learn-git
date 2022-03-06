@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Cymetrix.Andromeda.Encryption/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Cymetrix.Andromeda.Encryption.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cymetrix.Andromeda.Encryption.dll": {}
+        }
+      },
+      "SEIDR/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/SEIDR.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SEIDR.dll": {}
+        }
+      },
+      "SEIDR.JobBase/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Cymetrix.Andromeda.Encryption": "1.0.0",
+          "SEIDR": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SEIDR.JobBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SEIDR.JobBase.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cymetrix.Andromeda.Encryption/1.0.0": {
+      "type": "project",
+      "path": "../../Cymetrix.Andromeda.Encryption/Cymetrix.Andromeda.Encryption.csproj",
+      "msbuildProject": "../../Cymetrix.Andromeda.Encryption/Cymetrix.Andromeda.Encryption.csproj"
+    },
+    "SEIDR/1.0.0": {
+      "type": "project",
+      "path": "../SEIDR/SEIDR.csproj",
+      "msbuildProject": "../SEIDR/SEIDR.csproj"
+    },
+    "SEIDR.JobBase/1.0.0": {
+      "type": "project",
+      "path": "../SEIDR.JobBase/SEIDR.JobBase.csproj",
+      "msbuildProject": "../SEIDR.JobBase/SEIDR.JobBase.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "SEIDR.JobBase >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\neethu.vijayan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\MetrixGitNew\\metrix_git\\SEIDR\\SEIDR.Procedure\\SEIDR.ProcedureExecutor.csproj",
+      "projectName": "SEIDR.ProcedureExecutor",
+      "projectPath": "D:\\MetrixGitNew\\metrix_git\\SEIDR\\SEIDR.Procedure\\SEIDR.ProcedureExecutor.csproj",
+      "packagesPath": "C:\\Users\\neethu.vijayan\\.nuget\\packages\\",
+      "outputPath": "D:\\MetrixGitNew\\metrix_git\\SEIDR\\SEIDR.Procedure\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\neethu.vijayan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/gegQMFYVcf9egrZlkeQQHOxn2DW23zwirZZicvUNGXqxqzk8UR/api": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "D:\\MetrixGitNew\\metrix_git\\SEIDR\\SEIDR.JobBase\\SEIDR.JobBase.csproj": {
+              "projectPath": "D:\\MetrixGitNew\\metrix_git\\SEIDR\\SEIDR.JobBase\\SEIDR.JobBase.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

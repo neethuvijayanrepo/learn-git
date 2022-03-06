@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SEIDR.JobExecutor.Executor">
+    <Position X="11.25" Y="4.5" Width="4.5" />
+    <Members>
+      <Field Name="_jobCounter" Hidden="true" />
+      <Field Name="_maintenanceCounter" Hidden="true" />
+      <Field Name="_ThreadName" Hidden="true" />
+      <Field Name="DEADLOCK_TIME_INCREASE" Hidden="true" />
+      <Field Name="FAILURE_SLEEPTIME" Hidden="true" />
+      <Method Name="HandleAbort" Hidden="true" />
+      <Method Name="internalCall" Hidden="true" />
+      <Field Name="IsWorking" Hidden="true" />
+      <Property Name="JobExecutorCount" Hidden="true" />
+      <Property Name="MaintenanceCount" Hidden="true" />
+      <Field Name="MAX_TIMEOUT" Hidden="true" />
+      <Field Name="worker" Hidden="true" />
+      <Field Name="WorkLock" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="CallerService" Type="SEIDR.JobExecutor.JobExecutorService">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.865" Y="-0.331" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ExecutorType" Type="SEIDR.JobExecutor.ExecutorType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.25" Y="8.226" />
+        <Point X="10.875" Y="8.226" />
+        <Point X="10.875" Y="9.257" />
+        <Point X="8.75" Y="9.257" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.567" Y="0.09" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Status" Type="SEIDR.JobBase.Status.ThreadStatus">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-4.587" Y="0.88" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ARoATQEEAIA4ABAAAACBEIIAcAUoAQAEIIAAQkAAIlA=</HashCode>
+      <FileName>Executor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Manager" />
+      <Property Name="CallerService" />
+      <Property Name="ExecutorType" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEIDR.JobExecutor.Queue">
+    <Position X="6.5" Y="0.5" Width="4" />
+    <Members>
+      <Method Name="CheckWorkLoad" Hidden="true" />
+      <Field Name="GRAB_WORK" Hidden="true" />
+      <Method Name="HandleAbort" Hidden="true" />
+      <Field Name="INVALID" Hidden="true" />
+      <Field Name="map" Hidden="true" />
+      <Property Name="Workload" Hidden="true" />
+    </Members>
+    <AssociationLine Name="work" Type="SEIDR.JobBase.JobProfile">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.112" Y="16.329" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAEIgIABAAAAQAAAChCAIAAAAAEBAAAIAAQigAAAA=</HashCode>
+      <FileName>Queue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="work" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SEIDR.JobExecutor.CancellationExecutor">
+    <Position X="11" Y="1.25" Width="2.5" />
+    <Members>
+      <Field Name="cancel" Hidden="true" />
+      <Method Name="Cancel" Hidden="true" />
+      <Method Name="CancellationExecutor" Hidden="true" />
+      <Method Name="CheckWorkLoad" Hidden="true" />
+      <Field Name="GET_CANCEL_REQUEST" Hidden="true" />
+      <Field Name="model" Hidden="true" />
+      <Property Name="Workload" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="SEIDR.JobExecutor.Executor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.5" Y="4.5" />
+        <Point X="12.5" Y="2.483" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="execList" Type="SEIDR.JobExecutor.JobExecutor">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.29" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAhAAAAAQAAAAAEAAACAAAAAAAAAAAAAAAAAQAAIgAA=</HashCode>
+      <FileName>CancellationExecutor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="execList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SEIDR.JobExecutor.JobExecutor">
+    <Position X="16.25" Y="1.25" Width="3.25" />
+    <Members>
+      <Field Name="_requeue" Hidden="true" />
+      <Field Name="CancelRequested" Hidden="true" />
+      <Field Name="cancelSuccess" Hidden="true" />
+      <Field Name="GET_WORK" Hidden="true" />
+      <Method Name="HandleAbort" Hidden="true" />
+      <Method Name="IJobExecutor.LogInfo" Hidden="true" />
+      <Field Name="LastLibraryCheck" Hidden="true" />
+      <Field Name="LIBRARY_TARGET" Hidden="true" />
+      <Field Name="libraryLock" Hidden="true" />
+      <Field Name="LOG_FAILURE_WAIT" Hidden="true" />
+      <Method Name="LogFinish" Hidden="true" />
+      <Method Name="LogStart" Hidden="true" />
+      <Field Name="NameLock" Hidden="true" />
+      <Method Name="PopulateStatusList" Hidden="true" />
+      <Field Name="REQUEUE" Hidden="true" />
+      <Field Name="SET_STATUS" Hidden="true" />
+      <Field Name="START_WORK" Hidden="true" />
+      <Field Name="STATUS_TARGET" Hidden="true" />
+      <Field Name="statusList" Hidden="true" />
+      <Method Name="Stop" Hidden="true" />
+      <Field Name="WORK_LOCK_TARGET" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Library" Type="SEIDR.JobExecutor.JobLibrary">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.2" Y="0.225" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="currentJobMetaData" Type="SEIDR.JobBase.IJobMetaData" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19.5" Y="6.705" />
+        <Point X="19.667" Y="6.705" Type="JumpStart" />
+        <Point X="19.833" Y="6.705" Type="JumpEnd" />
+        <Point X="19.875" Y="6.705" />
+        <Point X="19.875" Y="8.937" />
+        <Point X="24.5" Y="8.937" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.791" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="workQueue" Type="SEIDR.JobExecutor.JobExecutionDetail">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.595" Y="0.286" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAkwTiEECIAsBAgIGYCBgAIBYBQNBASAYBAEQFAEBgw=</HashCode>
+      <FileName>JobExecutor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="currentJobMetaData" />
+      <Property Name="Library" />
+      <Property Name="connection" />
+      <Property Name="job" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="workQueue" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SEIDR.JobExecutor.JobLibrary">
+    <Position X="27.75" Y="6.75" Width="3.75" />
+    <Members>
+      <Field Name="_container" Hidden="true" />
+      <Method Name="~JobLibrary" Hidden="true" />
+      <Method Name="CheckDispose" Hidden="true" />
+      <Method Name="Compose" Hidden="true" />
+      <Property Name="IsValidState" Hidden="true" />
+      <Method Name="JobLibrary" Hidden="true" />
+    </Members>
+    <AssociationLine Name="maps" Type="System.Lazy&lt;T, TMetadata&gt;">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.322" Y="0.127" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAEAAAAAAAAAAQCiIQAACAAAAAAAAIAAIAAAA=</HashCode>
+      <FileName>JobLibrary.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="maps" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SEIDR.JobExecutor.JobExecutorService">
+    <Position X="1.75" Y="0.75" Width="4.5" />
+    <Members>
+      <Field Name="_Mailer" Hidden="true" />
+      <Field Name="_MGR" Hidden="true" />
+      <Field Name="_mre" Hidden="true" />
+      <Field Name="_Paused" Hidden="true" />
+      <Field Name="_ServiceAlive" Hidden="true" />
+      <Property Name="CurrentTimeMessage" Hidden="true" />
+      <Field Name="ExecutionThreadCount" Hidden="true" />
+      <Method Name="GetOverallStatus" Hidden="true" />
+      <Method Name="JobExecutorService" Hidden="true" />
+      <Field Name="LOG_FILE_FORMAT" Hidden="true" />
+      <Field Name="LogDirectory" Hidden="true" />
+      <Field Name="QueueThreadCount" Hidden="true" />
+      <Field Name="SHARED_LOG_FILE_FORMAT" Hidden="true" />
+      <Property Name="WorkingCount" Hidden="true" />
+    </Members>
+    <AssociationLine Name="DatabaseLookups" Type="SEIDR.JobBase.DatabaseLookupSet">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.439" Y="3.767" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BIpiAAiRAIAhAAAAFEEAAABgCgIAIAACEEAwZBAAA9I=</HashCode>
+      <FileName>JobExecutorService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MyStatus" />
+      <Property Name="DatabaseLookups" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEIDR.JobExecutor.ScheduleChecker">
+    <Position X="6.5" Y="6.75" Width="2.75" />
+    <Members>
+      <Method Name="CheckWorkLoad" Hidden="true" />
+      <Method Name="ScheduleChecker" Hidden="true" />
+      <Field Name="workLoad" Hidden="true" />
+      <Property Name="Workload" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAgIAEAAAAAAAAAAAACAAAAAEAAEAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>ScheduleChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEIDR.JobExecutor.ResetDelayExecutor">
+    <Position X="11" Y="12.5" Width="3.25" />
+    <Members>
+      <Method Name="CheckWorkLoad" Hidden="true" />
+      <Method Name="ResetDelayExecutor" Hidden="true" />
+      <Method Name="Work" Hidden="true" />
+      <Property Name="Workload" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="workList" Type="SEIDR.JobExecutor.JobExecutionDetail">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.03" Y="0.122" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAEAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>ResetDelayExecutor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="workList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SEIDR.JobExecutor.JobExecutionDetail">
+    <Position X="16.25" Y="11.5" Width="3" />
+    <Members>
+      <Property Name="Complete" Hidden="true" />
+      <Field Name="ExecutionJobProfile" Hidden="true" />
+      <Field Name="ExecutionStart" Hidden="true" />
+      <Method Name="Finish" Hidden="true" />
+      <Property Name="RetryCount" Hidden="true" />
+      <Method Name="Start" Hidden="true" />
+      <Property Name="ThreadChecked" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>YEAAAAAAAGAgAgKAEAAAgAABAAIAACAABIgQAATAAIo=</HashCode>
+      <FileName>JobExecutionDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Lazy&lt;T, TMetadata&gt;" Collapsed="true">
+    <Position X="29" Y="9.75" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SEIDR.JobBase.JobExecution">
+    <Position X="20.25" Y="11.5" Width="4.25" />
+    <Members>
+      <Method Name="JobExecution" Hidden="true" />
+    </Members>
+    <AssociationLine Name="JobProfileID" Type="System.Int32" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.5" Y="11.719" />
+        <Point X="32.875" Y="11.719" />
+        <Point X="32.875" Y="5.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="6.695" Y="6.492" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="JobProfileID" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEIDR.DataBase.DatabaseConnection" Collapsed="true">
+    <Position X="20.75" Y="4.75" Width="4.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SEIDR.JobBase.JobProfile">
+    <Position X="21.5" Y="0.5" Width="3.25" />
+    <Members>
+      <Property Name="Creator" Hidden="true" />
+      <Property Name="DC" Hidden="true" />
+      <Property Name="DD" Hidden="true" />
+      <Method Name="JobProfile" Hidden="true" />
+      <Property Name="LU" Hidden="true" />
+    </Members>
+    <AssociationLine Name="JobProfileID" Type="System.Int32" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.75" Y="1.029" />
+        <Point X="33.125" Y="1.029" />
+        <Point X="33.125" Y="4.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="5.673" Y="3.814" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="JobProfileID" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEIDR.JobBase.Status.ServiceStatus">
+    <Position X="1.25" Y="10.5" Width="3" />
+    <Members>
+      <Method Name="ServiceStatus" Hidden="true" />
+    </Members>
+    <AssociationLine Name="StatusList" Type="SEIDR.JobBase.Status.ThreadStatus" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="11.25" />
+        <Point X="4.917" Y="11.25" Type="JumpStart" />
+        <Point X="5.083" Y="11.25" Type="JumpEnd" />
+        <Point X="5.75" Y="11.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.642" Y="1.08" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="StatusList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SEIDR.JobBase.Status.ThreadStatus">
+    <Position X="5.75" Y="11" Width="4.75" />
+    <Members>
+      <Method Name="ThreadStatus" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SEIDR.JobBase.RegistrationFile">
+    <Position X="27.25" Y="12" Width="5" />
+    <AssociationLine Name="JobProfileID" Type="System.Int32">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-2.102" Y="6.477" Height="0.182" Width="1.802" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="JobProfileID" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEIDR.DataBase.DatabaseManager">
+    <Position X="21" Y="6" Width="5.5" />
+    <Members>
+      <Method Name="Clone" Hidden="true" />
+      <Method Name="DatabaseManager" Hidden="true" />
+      <Field Name="DEFAULT_DELETE" Hidden="true" />
+      <Field Name="DEFAULT_INSERT" Hidden="true" />
+      <Field Name="DEFAULT_SAVE" Hidden="true" />
+      <Field Name="DEFAULT_SELECT_LIST" Hidden="true" />
+      <Field Name="DEFAULT_SELECT_ROW" Hidden="true" />
+      <Field Name="DEFAULT_UPDATE" Hidden="true" />
+      <Property Name="DefaultRetryOnDeadlock" Hidden="true" />
+      <Property Name="DefaultSchema" Hidden="true" />
+      <Method Name="Delete" Hidden="true" />
+      <Field Name="DeleteFormat" Hidden="true" />
+      <Method Name="Execute" Hidden="true" />
+      <Method Name="ExecuteNonQuery" Hidden="true" />
+      <Method Name="ExecuteText" Hidden="true" />
+      <Method Name="ExecuteTextNonQuery" Hidden="true" />
+      <Method Name="GetBasicHelper" Hidden="true" />
+      <Method Name="GetConnection" Hidden="true" />
+      <Method Name="Insert" Hidden="true" />
+      <Field Name="InsertFormat" Hidden="true" />
+      <Property Name="ProgramName" Hidden="true" />
+      <Property Name="RethrowException" Hidden="true" />
+      <Method Name="Save" Hidden="true" />
+      <Field Name="SaveFormat" Hidden="true" />
+      <Method Name="SelectList" Hidden="true" />
+      <Field Name="SelectListFormat" Hidden="true" />
+      <Field Name="SelectRowFormat" Hidden="true" />
+      <Method Name="SelectRowWithKey" Hidden="true" />
+      <Method Name="SelectSingle" Hidden="true" />
+      <Method Name="SelectWithKey" Hidden="true" />
+      <Property Name="TimeOut" Hidden="true" />
+      <Method Name="Update" Hidden="true" />
+      <Field Name="UpdateFormat" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SEIDR.JobBase.JobExecutionCheckPoint">
+    <Position X="15.5" Y="17.25" Width="4.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SEIDR.JobBase.BaseContext">
+    <Position X="40.75" Y="9" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SEIDR.JobBase.ChildExecutionInfo">
+    <Position X="34.75" Y="12" Width="5.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SEIDR.JobBase.ContextJobBase&lt;T&gt;">
+    <Position X="34.75" Y="9" Width="5.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.708" />
+  </Class>
+  <Class Name="SEIDR.JobBase.DatabaseLookupSet">
+    <Position X="6" Y="19.5" Width="4.75" />
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Field Name="Connections" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SEIDR.JobBase.DatabaseLookup">
+    <Position X="31.75" Y="21.25" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Struct Name="System.Int32" Collapsed="true">
+    <Position X="32.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Interface Name="SEIDR.JobBase.IJobExecutor">
+    <Position X="25.75" Y="1.25" Width="6.25" />
+    <AssociationLine Name="connection" Type="SEIDR.DataBase.DatabaseConnection">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.194" Y="-0.263" Height="0.162" Width="0.951" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="connection" />
+      <Property Name="job" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="SEIDR.JobBase.IJobMetaData">
+    <Position X="24.5" Y="8.25" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SEIDR.JobBase.IJob">
+    <Position X="34.75" Y="7.25" Width="5.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Enum Name="SEIDR.JobExecutor.ExecutorType">
+    <Position X="7" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAKAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Executor.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

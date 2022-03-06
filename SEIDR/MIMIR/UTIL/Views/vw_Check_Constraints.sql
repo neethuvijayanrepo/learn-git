@@ -1,0 +1,24 @@
+﻿
+
+CREATE VIEW [UTIL].[vw_Check_Constraints]
+AS	
+SELECT
+	ck.Name,
+	ck.OBJECT_ID,
+	QUOTENAME(SCHEMA_NAME(SCHEMA_ID)) + '.' + QUOTENAME(OBJECT_NAME(PARENT_OBJECT_ID)) [PARENT_OBJECT],
+	COL_NAME(PARENT_OBJECT_ID, PARENT_COLUMN_ID) [PARENT_COLUMN],
+	PARENT_COLUMN_ID, 
+	PARENT_OBJECT_ID,
+	Create_Date, Modify_Date,
+	Is_Disabled, Is_Not_For_Replication,
+	Is_Not_Trusted, 
+	[DropStatement] = 'ALTER TABLE ' + QUOTENAME(SCHEMA_NAME(SCHEMA_ID)) + '.' + QUOTENAME(OBJECT_NAME(PARENT_OBJECT_ID)) + ' DROP CONSTRAINT ' + QUOTENAME(ck.name) + '
+GO',
+	[CreateStatement] = 'ALTER TABLE ' + QUOTENAME(SCHEMA_NAME(SCHEMA_ID)) + '.' + QUOTENAME(OBJECT_NAME(PARENT_OBJECT_ID))  
+	+ CASE WHEN Is_Not_Trusted = 1 then ' WITH NOCHECK' else ' WITH CHECK' end
+	+ ' ADD CONSTRAINT ' + QUOTENAME(ck.Name)
+	+ ' CHECK ' + [definition] + '
+GO',
+	ck.[Definition],
+	CheckStatement = 'ALTER TABLE '+ QUOTENAME(SCHEMA_NAME(SCHEMA_ID)) + '.' + QUOTENAME(OBJECT_NAME(PARENT_OBJECT_ID))  + ' CHECK CONSTRAINT ' + QUOTENAME(ck.Name)
+FROM sys.check_constraints ck
